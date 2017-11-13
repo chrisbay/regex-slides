@@ -310,3 +310,7 @@ body {
 .blackbg {
     box-shadow: 0px 9999px rgba(13, 13, 13, 0.4) inset;
 }
+
+strong {
+    color: #f47753;
+  }
