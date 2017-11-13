@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+        <meta name=viewport content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="./css/slidestyles.css" type="text/css" media="screen" charset="utf-8">
+
+    <!-- #ToDo: Change Title for the presentation -->
+    <title>Presentation Title</title>
+
+</head>
+
+<!-- #ToDo: Change 16:9 to 4:3 or vice versa, according to the current projector / screen -->
+<body onload="var slideshow = remark.create({ratio: '16:9', navigation: {scroll: true, touch: true, click: false}, countIncrementalSlides: false, highlightLanguage: 'bash', highlightStyle: 'tomorrow-night-blue'});">
+
+<!-- #ToDo: Write your slides in MarkDown here -->
+<textarea id="source">
+
+class: center, middle
+background-color: #cacaca
+
+![Title](./images/logo_white.png)
+
+---
+
+class: center, middle
+
+# Title
+
+???
+Your presenter notes
+
+---
+
+name: YourSlideName
+
+# HowTo: Writing
+
+To start writing your own slide deck in MarkDown, simply open the HTML file in your editor of choice and make changes as you wish. You can find all the places that you should edit by searching for the '#ToDo' hashtag inside the HTML file. Here are the different places in detail:
+
+1. Write your presentation's title in the 'title' tag of the 'head' section
+2. Set '16:9' or '4:3' dimensions in the body.onload JavaScript
+3. Write your slides in MarkDown as shown in the examples
+4. Be inspiring!
+
+---
+
+name: ForSlideInterLinking
+
+background-color: purple
+
+# HowTo: Presenting
+
+1. Open the HTML file in a browser (via 'file://' or local webserver)
+2. Press 'c' to clone the current view into a new, synced window
+3. Press 'p' in the original window to enter Presenter Console
+4. Move the cloned window to projector / screen display
+5. Press 'f' to make the cloned window fullscreen
+6. Enjoy!
+
+Hint: You can always press 'h' to see an overview of all available key commands.
+
+---
+
+name: Customizing
+
+# Note on Customizing
+
+If placing slides in a subdirectory (which is recommended for larger collections of presentations), update the location of JS and CSS files in the template:
+
+```html
+<!-- in the head -->
+<link rel="stylesheet" href="../css/slidestyles.css" type="text/css" media="screen" charset="utf-8">
+
+<!-- before the closing body tag -->
+<script type="text/javascript" src="../js/remark-latest.min.js"></script>
+```
+
+</textarea>
+
+<script type="text/javascript" src="./js/remark-latest.min.js"></script>
+</body>
+</html>
