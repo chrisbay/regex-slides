@@ -27,10 +27,10 @@ class: center, middle
 - A pattern-matching language for testing strings
 --
 
-- Given a pattern (e.g. "contains two digits"), does a given string match the pattern?
+- Given a pattern (e.g. "contains two digits in a row"), does a given string contain something that fits the pattern?
 --
 
-- Most language provide regex tools that allow a programmer to do things with regexex and matched strings 
+- Most languages provide regex tools that allow a programmer to do things with regexes and matched substrings 
 --
 
 - We'll use JavaScript, but the same broad concepts apply to other languages, and regex syntax is similar from one language to another
@@ -48,10 +48,10 @@ class: center, middle
 In JS, a regular expression can be created as a literal by encolosing the pattern in `/` characters 
 
 ```
-let myRegex = / /* pattern */ /;
+let myRegex = /PATTERN/;
 ```
 
-If a string contains a substring that conforms to the pattern, we say it "matches" the substring (or, lazily, that it matches the string itself)
+If a string contains a substring that fits the pattern, we say it "matches" the substring (or, lazily, that it matches the string itself)
 
 --
 
@@ -152,7 +152,7 @@ The quantifier `{n,m}` specifies that a portion must be repeated between `n` and
 
 --
 
-- `/dog{1,2}/` matches `"dog"` and `"doggo"` but not `"do"` or `"doggggo"`
+- `/dog{1,2}/` matches `"dog"`, `"doggo"`, and `"doggggo"` but not `"do"`
 --
 
 - `/dog{2,}/` matches `"doggo"` and `"doggggo"` but not `"dog"`
